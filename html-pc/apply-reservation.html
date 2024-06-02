@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>페이지명 | 미래에셋 홍천연수원</title>
+    <link rel="stylesheet" href="/assets/pc/css/reset.css">
+    <link rel="stylesheet" href="/assets/pc/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/assets/pc/css/swiper.min.css">
+    <link rel="stylesheet" href="/assets/pc/css/layout.css">
+    <link rel="stylesheet" href="/assets/pc/css/common.css">
+    <link rel="stylesheet" href="/assets/pc/css/style.css">
+    <script type="text/javascript" src="/assets/pc/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/pc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/assets/pc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="/assets/pc/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="/assets/pc/js/ui.common.js"></script>
+</head>
+<body>
+    <ul class="skip-navigation">
+        <li><a href="#content">본문내용 바로가기</a></li>
+    </ul>
+    <div id="wrapper">
+        <header id="header">
+            <div class="inner-header">
+                <h1 class="logo"><a href="#"><span class="a11y">미래에셋 홍천 연수원</span></a></h1>
+                <nav id="gnb">
+                     <ul>
+                         <li><a href="#">미래를 보는 눈</a>
+                             <ul>
+                                 <li><a href="#">미래를 보는 눈 소개</a></li>
+                                 <li><a href="#">Contact US</a></li>
+                             </ul>
+                         </li>
+                         <li><a href="#">시설안내</a>
+                             <ul>
+                                 <li><a href="#">연수시설</a></li>
+                                 <li><a href="#">숙박시설</a></li>
+                                 <li><a href="#">편의시설</a></li>
+                             </ul>
+                         </li>
+                         <li><a href="#">이용안내</a></li>
+                         <li><a href="#">공지사항</a></li>
+                     </ul>
+                 </nav>
+            </div>             
+         </header>
+        <div id="content">
+            <!-- content -->
+
+            <!-- 열기 테스트용 -->
+            <br><br><br><br><br><br>
+            <br><br><br><br><br><br>
+            <div style="padding:100px"><button type="button" onclick="reservation.open();" style="padding:10px; font-size:15px">공통 대관문의 레이어 오픈</button></div>
+            <div style="height:1200px"></div>
+            <br><br>
+            <!-- //열기 테스트용 -->
+
+            <!--- 대관문의 레이어 -->
+            <section class="section-reservation">
+                <header class="header-section">
+                    <h2>대관문의/예약</h2>
+                    <p class="desc">고객님께서 문의하신 내용은 빠른 시간 내에 연락처 또는 이메일로 답변을 드리겠습니다.<br>궁금하신 점은 033-439-1600로 문의 주시면 친절히 답변해 드리겠습니다.</p>
+                </header>
+                <div class="content-section">
+                    <!-- 문의 유형 -->
+                    <section class="group-form">
+                        <header class="header-group">
+                            <h3>문의유형</h3>
+                        </header>
+                        <div class="content-group">
+                           <ul class="tbl-form">
+                               <li class="cel">
+                                    <div class="group-check">
+                                        <span class="input-check radio"><input type="radio" id="selectTypeApply1" name="selectTypeApply" onchange="changeType(0)" checked><label for="selectTypeApply1">대관문의</label></span>
+                                        <span class="input-check radio"><input type="radio" id="selectTypeApply2" name="selectTypeApply" onchange="changeType(1)"><label for="selectTypeApply2">대관신청</label></span>
+                                    </div>
+                                </li>
+                           </ul> 
+                        </div>
+                    </section>
+                    <!-- //문의 유형 -->
+                    <!-- 행사정보(대관문의시) -->
+                    <section class="group-form" id="applyTypeContent1" style="display:block">
+                        <header class="header-group">
+                            <h3>행사정보</h3>
+                            <p class="note">필수입력항목<span class="asta">*</span></p>
+                        </header>
+                        <div class="content-group">
+                           <ul class="tbl-form col2">
+                                <li class="cel">
+                                    <div class="label"><label for="infoEventA1">기업명/행사명<span class="asta">*<span class="a11y">(필수입력항목)</span></span></label></div>
+                                    <div class="input-text">
+                                        <input type="text" id="infoEventA1" name="">
+                                        <button class="clear" type="button"><span class="a11y">삭제</span></button>
+                                    </div>
+                                </li>
+                                <li class="cel">
+                                    <div class="label"><label for="infoEventA3_1">행사일정<span class="asta">*<span class="a11y">(필수입력항목)</span></span></label></div>
+                                    <div class="wrap-multi wrap-range">
+                                        <input type="text" id="infoEventA3_1" name="" placeholder="행사 시작일">
+                                        <span class="unit">~</span>
+                                        <input type="text" id="infoEventA3_2" name="" placeholder="행사 종료일">
+                                    </div>
+                                </li>
+                                <li class="cel">
+                                    <div class="label"><label for="infoEventA4">인원<span class="asta">*<span class="a11y">(필수입력항목)</span></span></label></div>
+                                    <div class="input-text with-unit">
+                                        <input type="text" id="infoEventA4" name="" placeholder="숫자만 입력하세요.">
+                                        <span class="unit">명</span>
+                                        <button class="clear" type="button"><span class="a11y">삭제</span></button>
+                                    </div>
+                                </li>
+                                <li class="cel">
+                                    <div class="label"><label for="infoEventA2">행사시간<span class="asta">*<span class="a11y">(필수입력항목)</span></span></label></div>
+                                    <div class="input-select">
+                                        <select id="infoEventA2" name="">
+                                            <option>선택</option>
+                                            <option>오전</option>
+                                            <option>오후</option>
+                                        </select>
+                                    </div>
+                                </li>
+                           </ul> 
+                        </div>
+                    </section>
+                    <!-- //행사정보(대관문의시) -->
+                    <!-- 행사정보 및 선택정보(대관신청시) -->
+                    <div id="applyTypeContent2" style="display:none">
+                        <section class="group-form">
+                            <header class="header-group">
+                                <h3>행사정보</h3>
+                                <p class="note">필수입력항목<span class="asta">*</span></p>
+                            </header>
+                            <div class="content-group">
+                                <ul class="tbl-form col2">
+                                    <li class="cel">
+                                        <div class="label"><label for="infoEventB1">기업명/행사명<span class="asta">*<span class="a11y">(필수입력항목)</span></span></label></div>
+                                        <div class="input-text">
+                                            <input type="text" id="infoEventB1" name="">
+                                            <button class="clear" type="button"><span class="a11y">삭제</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="cel">
+                                        <div class="label"><label for="infoEventB2_1">행사일정<span class="asta">*<span class="a11y">(필수입력항목)</span></span></label></div>
+                                        <div class="wrap-multi wrap-range">
+                                            <input type="text" id="infoEventB2_1" name="" placeholder="행사 시작일">
+                                            <span class="unit">~</span>
+                                            <input type="text" id="infoEventB2_2" name="" placeholder="행사 종료일">
+                                        </div>
+                                    </li>
+                                    <li class="cel">
+                                        <div class="label"><label for="infoEventB3">인원<span class="asta">*<span class="a11y">(필수입력항목)</span></span></label></div>
+                                        <div class="input-text with-unit">
+                                            <input type="text" id="infoEventB3" name="" placeholder="숫자만 입력하세요.">
+                                            <span class="unit">명</span>
+                                            <button class="clear" type="button"><span class="a11y">삭제</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="cel">
+                                        <div class="label"><label for="infoEventB4">행사목적<span class="asta">*<span class="a11y">(필수입력항목)</span></span></label></div>
+                                        <div class="input-select">
+                                            <select id="infoEventB4">
+                                                <option>선택</option>
+                                                <option>신입사원 연수</option>
+                                                <option>임직원 세미나</option>
+                                                <option>기업연회</option>
+                                                <option>기타</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="cel">
+                                        <div class="label"><strong>희망 행사장소<span class="asta">*<span class="a11y">(필수입력항목)</span></span></strong><span class="note">복수선택 가능</span></div>
+                                        <div class="list-append place">
+                                            <div class="set-append last">
+                                                <div class="input-select">
+                                                    <select id="">
+                                                        <option value="0">행사장</option>
+                                                        <option>행사장1</option>
+                                                        <option>행사장2</option>
+                                                        <option>행사장3</option>
+                                                        <option>행사장4</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-select">
+                                                    <select id="">
+                                                        <option value="0">행사시간</option>
+                                                        <option>오전</option>
+                                                        <option>오후</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="appendix">
+                                                <span>Junior Deluxe(16py, 2인)</span>
+                                                <strong>16실</strong>
+                                                <button type="button" class="del"><span class="a11y">삭제</span></button>
+                                            </div> -->
+                                        </div>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </section>
+                        <section class="group-form">
+                            <header class="header-group">
+                                <h3>선택정보</h3>
+                                <button type="button" class="toggle"><span class="a11y">영역 여닫기</span></button>
+                            </header>
+                            <div class="content-group">
+                                <ul class="tbl-form col2">
+                                    <li class="cel">
+                                        <div class="label"><strong>객실 선택<span class="asta">*<span class="a11y">(필수입력항목)</span></span></strong></div>
+                                        <div class="list-append room">
+                                            <div class="set-append last">
+                                                <div class="input-select">
+                                                    <select id="">
+                                                        <option value="0">객실</option>
+                                                        <option>Junior Deluxe(16py, 2인)</option>
+                                                        <option>Junior Suite(23py, 2인)</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-select">
+                                                    <select id="">
+                                                        <option value="0">객실 수</option>
+                                                        <option>1개</option>
+                                                        <option>2개</option>
+                                                        <option>3개</option>
+                                                        <option>4개</option>
+                                                        <option>5개</option>
+                                                        <option>6개</option>
+                                                        <option>7개</option>
+                                                        <option>8개</option>
+                                                        <option>9개</option>
+                                                        <option>10개</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cel">
+                                        <div class="label"><strong>식사 선택<span class="asta">*<span class="a11y">(필수입력항목)</span></span></strong></div>
+                                        <div class="list-append meal">
+                                            <div class="set-append last">
+                                                <div class="input-select">
+                                                    <select id="">
+                                                        <option value="0">식사</option>
+                                                        <option>아침 (식사: 7:00~8:30/간식: 9:00)</option>
+                                                        <option>점심 (식사: 11:30~13:00/간식: 15:00)</option>
+                                                        <option>저녁 (식사: 17:30~19;00/간식: 19:00)</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-select">
+                                                    <select id="">
+                                                        <option value="0">타입</option>
+                                                        <option>일반식</option>
+                                                        <option>만찬</option>
+                                                        <option>간식</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- //행사정보 및 선택정보(대관신청시) -->
+                    <!-- 예약자 정보 -->
+                    <section class="group-form">
+                        <header class="header-group">
+                            <h3>예약자 정보</h3>
+                            <p class="note">필수입력항목<span class="asta">*</span></p>
+                        </header>
+                        <div class="content-group">
+                            <ul class="tbl-form col2">
+                                <li class="cel">
+                                    <div class="label"><label for="infoCustomer1">예약자 성함<span class="asta">*<span class="a11y">(필수입력항목)</span></span></label></div>
+                                    <div class="input-text">
+                                        <input type="text" id="infoCustomer1" name="">
+                                        <button class="clear" type="button"><span class="a11y">삭제</span></button>
+                                    </div>
+                                </li>
+                                <li class="cel">
+                                    <div class="label"><label for="infoCustomer2_1">이메일<span class="asta">*<span class="a11y">(필수입력항목)</span></span></label></div>
+                                    <div class="wrap-multi wrap-mail">
+                                        <div class="input-text">
+                                            <input type="text" id="infoCustomer2_1" placeholder="이메일 입력">
+                                            <button class="clear" type="button"><span class="a11y">삭제</span></button>
+                                        </div>
+                                        <span class="unit">@</span>
+                                        <div class="input-text">
+                                            <input type="text" id="infoCustomer2_1" placeholder="직접입력">
+                                            <button class="clear" type="button"><span class="a11y">삭제</span></button>
+                                        </div>
+                                        <div class="input-select">
+                                            <select id="infoEventB5">
+                                                <option>직접입력</option>
+                                                <option>지메일</option>
+                                                <option>네이버</option>
+                                                <option>다음</option>
+                                                <option>핫메일</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cel">
+                                    <div class="label"><label for="infoCustomer3_1">휴대전화번호<span class="asta">*<span class="a11y">(필수입력항목)</span></span></label></div>
+                                    <div class="wrap-multi wrap-phone">
+                                        <div class="input-text">
+                                            <input type="text" id="infoCustomer3_1" title="휴대전화번호 앞자리">
+                                            <button class="clear" type="button"><span class="a11y">삭제</span></button>
+                                        </div>
+                                        <span class="unit">-</span>
+                                        <div class="input-text">
+                                            <input type="text" id="infoCustomer3_2" title="휴대전화번호 가운데자리">
+                                            <button class="clear" type="button"><span class="a11y">삭제</span></button>
+                                        </div>
+                                        <span class="unit">-</span>
+                                        <div class="input-text">
+                                            <input type="text" id="infoCustomer3_3" title="휴대전화번호 끝 4자리">
+                                            <button class="clear" type="button"><span class="a11y">삭제</span></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cel">
+                                    <div class="label"><strong>답변방법<span class="asta">*<span class="a11y">(필수입력항목)</span></span></strong></div>
+                                    <div class="group-check">
+                                        <span class="input-check radio"><input type="radio" id="infoCustomer4_1" name="infoCustomer4" checked><label for="infoCustomer4_1">전화</label></span>
+                                        <span class="input-check radio"><input type="radio" id="infoCustomer4_2" name="infoCustomer4"><label for="infoCustomer4_2">이메일</label></span>
+                                    </div>
+                                </li>
+                           </ul> 
+                        </div>
+                    </section>
+                    <!-- //예약자 정보 -->
+                    <!-- 기타 요청사항 -->
+                    <section class="group-form">
+                        <header class="header-group">
+                            <h3>기타요청사항</h3>
+                        </header>
+                        <div class="content-group">
+                            <textarea id="" placeholder="100자 이내로 입력하세요."></textarea>
+                        </div>
+                    </section>
+                    <!-- //기타 요청사항 -->
+                    <!-- 약관 동의 -->
+                    <section class="group-form">
+                        <header class="header-group">
+                            <h3>[필수] 개인정보 수집 및 이용동의</h3>
+                            <span class="input-check checkbox"><input type="checkbox" id="checkAgreement" checked><label for="checkAgreement">동의</label></span>
+                        </header>
+                        <div class="content-agreement">
+                            <div class="inner-agreement">
+                                미래에셋 홍천 연수원은 다음 각 호의 개인정보를 아래와 같은 목적을 위하여 수집하고 있습니다.<br><br>
+                                1. 개인정보의 수집·이용 목적<br>
+                                &nbsp;&nbsp;&nbsp;- 예약 및 서비스 제공<br>
+                                2. 수집하는 개인정보의 항목<br>
+                                &nbsp;&nbsp;&nbsp;- 이름, 휴대전화번호, 이메일주소<br>
+                                3. 개인정보의 보유·이용 기간<br>
+                                &nbsp;&nbsp;&nbsp;- 목적 달성 시 파기(예약 취소 시 취소 후 5일 이내 파기)<br>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- //기타 요청사항 -->
+                    <div class="notice"><p>문의 접수 시 예약이 확정되는 것은 아니며, 담당 직원이 확인 후 전화 또는 이메일로 친절하게 안내해 드리겠습니다.</p></div>
+                    <div class="board-action">
+                        <a class="btn-big" href="#"><span>신청</span></a>
+                    </div>
+                </div>
+                <a class="close-reservation" href="#" onclick="reservation.close(); return false;"><span class="a11y">닫기</span></a>
+            </section>
+            <script type="text/javascript" src="/assets/pc/js/datepicker.ko.js"></script>
+            <script type="text/javascript" src="/assets/pc/js/fakeselect.min.js"></script>
+            <script>
+                //대관문의 팝업 여닫기
+                var reservation = {
+                    open : function(){
+                        $(".section-reservation").show();
+                        $("body,html").addClass("fixed");
+                        $("body").css("margin-right", scrollbarWidth * 1);
+                    },
+                    close : function(){
+                        $(".section-reservation").scrollTop(0).hide();
+                        $("body,html").removeClass("fixed");
+                        $("body").css("margin-right","");
+                    }
+                }
+            
+                //대관 문의유형 선택
+                var changeType = function(n){
+                    if(n == 0){
+                        $("#applyTypeContent1").show();
+                        $("#applyTypeContent2").hide();
+                    }else{
+                        $("#applyTypeContent1").hide();
+                        $("#applyTypeContent2").show();
+                    }
+                }
+
+                //폼 UI 컨트롤
+                var form = {
+                    init : function(){
+                        if ($('.list-append').length) {
+                            this.addOptionRow.init();
+                        }
+                        if($(".input-text.step").length){
+                            this.spinnerAmount.init();
+                        }
+                        if($(".input-text").length){
+                            this.clearInput.init();
+                        }
+                    },
+                    clearInput: {
+                        init: function init(){
+                            var _this = this;
+                            _this.event();
+                        },
+                        event: function event(){
+                            var _this = this;
+                            var input = $(".input-text");
+                            input.each(function(idx,elem){
+                                var $this = $(this);
+                                $this.on("mouseenter", function(event){
+                                    _this.show(event,$(this));
+                                });
+                                $this.on("mouseleave", function(event){
+                                    _this.hide(event,$(this));
+                                });
+                                $this.on("focus keyup", "input[type='text']", function(event){
+                                    _this.show(event,$(this));
+                                });
+                                $this.on("click", ".clear", function(event){
+                                    _this.delete(event,$(this));
+                                });
+                            });
+                        },
+                        show: function show(event, element){
+                            var target;
+                            if (event.type == 'mouseenter') {
+                                //element.addClass("active");
+                                target = element.find("input[type='text']");
+                            }else{
+                                target = element;
+                            }
+                            if(target.val() !== ''){
+                                target.parent().addClass("active");
+                            }
+                        },
+                        hide: function hide(event, element){
+                            element.removeClass("active");
+                        },
+                        delete: function del(event, element){
+                            element.parent().removeClass("active");
+                            element.parent().children("input[type='text']").val("").focus();
+                        }
+                    },
+                    addOptionRow: {
+                        init: function init() {
+                            var _this = this;
+                            _this.event();
+                        },
+                        event: function event(){
+                            var _this = this;
+                            var $rows = $(".list-append");
+                            /* $rows.on("click", '.add', function(){
+                                _this.addRow($(this));
+                            }); */
+                            $rows.each(function(){
+                                var $this = $(this);
+                                $(this).on("change", ".input-select select", function(){ //두번째 셀렉트박스 값이 변경되면 row 추가
+                                    var $val1 = $this.find(".input-select:first-child select").val() * 1;
+                                    var $val2 = $this.find(".input-select:last-child select").val() * 1;
+                                    if($val1 !== 0 && $val2 !== 0){
+                                        _this.addRow($this);
+                                    }
+                                });
+                            });
+                            
+                            $rows.on("click", '.del', function(){
+                                _this.delRow($(this));
+                            });
+                        },
+                        addRow: function addRow(wrapper){
+                            var $wrapper = wrapper;
+                            var $val1 = $wrapper.find(".set-append > .input-select").eq(0).find("select").val();
+                            var $val2 = $wrapper.find(".set-append > .input-select").eq(1).find("select").val();
+                            
+                            var $html = '';
+                            $html += '<span>' + $val1+ '</span>';
+                            $html += '<strong>' + $val2+ '</strong>';
+                            $html += '<button type="button" class="del"><span class="a11y">삭제</span></button>';
+                            $wrapper.append($("<div class='appendix'></div>").html($html));
+                            
+                            //셀렉트 초기화
+                            $wrapper.find("select").prop('selectedIndex',0);
+                            $wrapper.find("select").fakeselect();
+                            /*
+                            <div class="appendix">
+                                                <span>Junior Deluxe(16py, 2인)</span>
+                                                <strong>16실</strong>
+                                                <button type="button" class="del"><span class="a11y">삭제</span></button>
+                                            </div>
+                                            */
+                            /*
+                            var $btn = btn;
+                            var $thisrow = $btn.parent();
+                            var $wrapper = $btn.parent().parent();
+                            var $input1 = $input2 = $('<div class="input-select"></div>').append($thisrow.children(".input-select").eq(0).children("select").clone().attr("style","").removeAttr("data-fakeform-index"));
+                            var $input2;
+                            if($thisrow.find(".input-select").length > 1){
+                                $input2 = $('<div class="input-select"></div>').append($thisrow.children(".input-select").eq(1).children("select").clone().attr("style","").removeAttr("data-fakeform-index"));
+                            }else{
+                                $input2 = $('<div class="input-text step"></div>');
+                                $thisrow.children(".input-text").children().each(function(){
+                                    $input2.append($(this).clone().val($(this).data("defaultValue")));
+                                });
+                            }
+                            var $btn1 = $thisrow.children(".add").clone();
+                            var $btn2 = $thisrow.children(".del").clone();
+                            var $row;
+                            $row = $('<div class="set-append"></div>').append($input1).append($input2).append($btn1).append($btn2);
+
+                            $wrapper.append($row);
+                            $wrapper.find('select').fakeselect(); //fake셀렉트 재선언
+                            $wrapper.children(".set-append").removeClass("last");
+                            $wrapper.children(".set-append:last-child").addClass("last");
+                            */
+                        },
+                        delRow: function delRow(btn){
+                            /*
+                            var $btn = btn;
+                            var $thisrow = $btn.parent();
+                            var $wrapper = $btn.parent().parent();
+                            $thisrow.find("select").fakeselect('remove');
+                            $thisrow.remove();
+                            $wrapper.children(".set-append").removeClass("last");
+                            $wrapper.children(".set-append:last-child").addClass("last");
+                            */
+                            var $btn = btn;
+                            var $thisrow = $btn.parent();
+                            $thisrow.remove();
+                        }
+                    },
+                    /*
+                    spinnerAmount: {
+                        init: function init(){
+                            var _this = this;
+                            _this.event();
+                        },
+                        event: function event(){
+                            //var _this = this;
+                            var $rows = $(".list-append");
+                           
+                            $rows.on("click", '.plus', function(){
+                                var $input = $(this).siblings("input[type='text']");
+                                var $cur = $input.data("current") * 1;
+                                var $new = $cur + 1;
+                                $input.val($new + "개").data("current", $new);
+                            });
+                            $rows.on("click", '.minus', function(){
+                                var $input = $(this).siblings("input[type='text']");
+                                var $cur = $input.data("current") * 1;
+                                var $new = $cur - 1;
+                                if($cur > 1){
+                                    $input.val($new + "개").data("current", $new);
+                                }
+                            });
+                        },
+                    }
+                    */
+                }
+                //행사일정 datepicker 초기설정
+                var dateFormat = "yy.mm.dd";
+                //대관문의
+                var setRangeFrom1 = $( "#infoEventA3_1" ).datepicker({
+                    defaultDate: "+1w",
+                }).on( "change", function() {
+                    setRangeTo1.datepicker( "option", "minDate", getDate( this ) );
+                }),
+                setRangeTo1 = $( "#infoEventA3_2" ).datepicker({
+                    defaultDate: "+1w",
+                }).on( "change", function() {
+                    setRangeFrom1.datepicker( "option", "maxDate", getDate( this ) );
+                });
+                //대관신청
+                var setRangeFrom2 = $( "#infoEventB2_1" ).datepicker({
+                    defaultDate: "+1w",
+                }).on( "change", function() {
+                    setRangeTo2.datepicker( "option", "minDate", getDate( this ) );
+                }),
+                setRangeTo2 = $( "#infoEventB2_2" ).datepicker({
+                    defaultDate: "+1w",
+                }).on( "change", function() {
+                    setRangeFrom2.datepicker( "option", "maxDate", getDate( this ) );
+                });
+
+                function getDate(element) {
+                    console.log(element)
+                    var date;
+                    try {
+                        date = $.datepicker.parseDate( dateFormat, element.value );
+                    } catch( error ) {
+                        date = null;
+                    }
+                    console.log(date)
+                    return date;
+                }
+                
+                /* var addselect = (function() {
+                    var $inserttarget = $('#ex-addselect'),
+                        addselectno = 0;
+                    return function() {
+                        var $newselect = $('<select />'),
+                            options = $newselect[0].options,
+                            i = 0;
+                        $newselect[0].options.length = ++addselectno;
+                        for ( ; i < addselectno; i++ ) {
+                            options[i].text = '추가셀렉트 '+ addselectno +' 옵션 '+ (i+1);
+                        }
+                        $inserttarget.before(' ').before($newselect);
+                        $newselect.fakeselect();
+                    }
+                })(); */
+
+                $(function(){
+                    $('select').fakeselect();
+                    form.init();
+                    $(".group-form .header-group .toggle").on("click", function(){
+                        var $parent = $(this).parent().parent();
+                        var $content = $parent.find(".content-group");
+                        $content.slideToggle(200);
+                        $(this).toggleClass("active");
+                    });
+                });
+            </script>
+            <!-- //대관문의 레이어 -->
+
+            <!-- //content -->
+        </div>
+        <footer id="footer">
+            <div class="group-footer footer1"><div class="inner-footer">
+                <div class="wrap-footer">
+                    <em class="logo"><span class="a11y">MIRAE ASSET</span></em>
+                    <div class="info">
+                        <strong class="title">미래에셋 홍천 연수원</strong>
+                        <p>강원도 홍천군 두촌면 광석로 898-87 ㅣ 대표전화 033) 439-1600 </p>
+                        
+                        <ul class="menu">
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">이메일집단수집거부</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">영상정보처리운영방침</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn-act-line btn-footer" href="#"><span>세이지우드 홍천</span></a>
+                    <a class="btn-top" href="#"><span class="a11y">TOP으로</span></a>
+                </div>
+            </div></div>
+            <div class="group-footer footer2"><div class="inner-footer">
+                <div class="wrap-footer">
+                    <p class="copyright"><span class="c">&copy;</span>Copyright 2020 ©Mirae Asset Daewoo Co.& Mirae Asset Life Insurance Co.,LTD. ALL RIGHTS RESERVED</p>
+                </div>
+            </div></div>
+        </footer>
+    </div>
+    
+</body>
+</html>

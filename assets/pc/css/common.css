@@ -1,0 +1,207 @@
+@charset "UTF-8"; 
+
+.ui-datepicker {width:348px; padding:38px 38px 60px; border:1px solid #ddd; background:#fff; box-shadow:0 5px 15px 0 rgba(0, 0, 0, 0.1); border-radius:0;}
+.ui-datepicker th {padding:30px 5px; height:23px; font-weight:300; color:#454545;}
+.ui-datepicker td {padding:5px; text-align:center; font-size:1.3rem;}
+.ui-datepicker td span,
+.ui-datepicker td a {padding:0; text-align:center; background:#fff;}
+.ui-datepicker .ui-state-default {background:#fff; border:0; height:30px; line-height:30px; color:#000; font-weight:normal;}
+.ui-datepicker .ui-datepicker-today .ui-state-highlight {position:relative}
+.ui-datepicker .ui-datepicker-today .ui-state-highlight:after {content:''; position:absolute; right:2px; top:2px; width:4px; height:4px; border-radius:100%; background-color:#f58220}
+.ui-datepicker .ui-datepicker-current-day .ui-state-active {color:#fff; background-color:#f58220;}
+.ui-datepicker .ui-datepicker-unselectable {opacity:.25;}
+.ui-datepicker .ui-datepicker-header {padding:0; background:#fff; border:0}
+.ui-datepicker .ui-datepicker-header a[class^='ui-datepicker-'] {border:0; width:31px; height:16px; top:0}
+.ui-datepicker .ui-datepicker-header a[class^='ui-datepicker-'] .ui-icon {opacity:0; background:none;}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {left:0; background:url(/assets/pc/images/common/btn-calendar.png) 0 0 no-repeat; background-size:100% 100%; transform:rotate(180deg);}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next {right:0; background:url(/assets/pc/images/common/btn-calendar.png) 0 0 no-repeat; background-size:100% 100%;}
+.ui-datepicker .ui-datepicker-header .ui-state-disabled {opacity:.25;}
+.ui-datepicker .ui-datepicker-title {font-family:'serif'; color:#000; font-size:1.8rem; line-height:100%; margin:0 35px}
+.ui-datepicker .ui-datepicker-month {margin-left:-.5em}
+
+input:not([type='radio']):not([type='checkbox']) {height:54px; padding:0 20px; border:1px solid #ddd; font-size:1.4rem;}
+/* input:not([type='radio']):not([type='checkbox']):hover,*/
+input:not([type='radio']):not([type='checkbox']):focus {outline:none; border-color:#000}
+input:not([type='radio']):not([type='checkbox']):disabled {background-color:#f5f5f5;}
+
+textarea {width:100%; min-height:130px; padding:20px; border:1px solid #ddd; font-size:1.4rem; line-height:normal}
+textarea:hover,
+textarea:focus {outline:none; border-color:#000}
+textarea:disabled {background-color:#f5f5f5;}
+
+select {height:54px; padding:0 20px; border:1px solid #ddd; font-size:1.4rem;}
+.input-select select {display:block; width:100%}
+.select-title {position:relative; text-align:left; vertical-align: middle; padding:0 45px 0 20px; border:1px solid #ddd; background:#fff; display:inline-block}
+.select-title:after {content:''; position:absolute; right:22px; top:50%; width:14px; height:9px; margin-top:-4.5px; background:url(/assets/pc/images/common/ico-toggle-select.svg); background-size:100% 100%;}
+.select-title strong {display:block; width:100%; height:52px; line-height:52px; font-weight: normal; font-size: 1.4rem; word-break:break-all; overflow: hidden; text-overflow:ellipsis;}
+.select-title.focus,
+.select-title.active {color:#000; border-color:#000;}
+.select-title.active:after {-webkit-transform:rotate(180deg); transform:rotate(180deg);}
+.select-title.disabled {background-color:#f5f5f5;}
+.select-option {border:1px solid #ddd; border-top-color:#000; overflow: auto;}
+.select-option span,
+.select-option strong {display:block; height:54px; line-height:54px; font-size:1.4rem; font-weight:normal; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-decoration: none; padding:0 20px; background:#fff;}
+.select-option strong {font-weight: bold; color: #000; border-top: 1px solid #eee; border-bottom: 1px solid #ccc;}
+.select-option span:hover,
+.select-option span.selected {background:#eceff4;}
+.select-option.upper {margin-top:2px; border:1px solid #ddd; border-bottom-color:#000}
+.input-select .select-title {width:100% !important}
+
+.input-text {display:inline-block; position:relative}
+.input-text .clear {display:none; position:absolute; right:1px; top:1px; width:57px; height:calc(100% - 2px); background-color:#fff; border:0}
+.input-text.active .clear {display:block}
+.input-text .clear:after {content:''; position:absolute; right:16px; top:14px; width:25px; height:25px; background:url(/assets/pc/images/common/btn-clear.svg); background-size:100% 100%;}
+.input-text .unit {position:absolute; right:1px; top:1px; height:calc(100% - 2px); line-height:52px; text-align:right; font-size:1.4rem; padding:0 19px}
+.input-text.step:before {content:''; position:absolute; left:0; top:0; width:100%; height:100%; background:rgba(255,255,255,0);}
+.input-text.step input {padding-right:92px}
+.input-text.step .btn-amount {position:absolute; top:13px; width:31px; height:31px; background-color:#fff; border:0}
+.input-text.step .btn-amount.plus {right:13px}
+.input-text.step .btn-amount.minus {right:52px}
+.input-text.step .btn-amount:before,
+.input-text.step .btn-amount:after {content:''; position:absolute; left:50%; top:50%; background-color:#000;}
+.input-text.step .btn-amount:before {width:15px; height:1px; margin:-.5px 0 0 -7.5px}
+.input-text.step .btn-amount.plus:after {width:1px; height:15px; margin:-7.5px 0 0 -.5px}
+
+.input-check {display:inline-block; position:relative;}
+.input-check + .input-check {margin-left:48px}
+.input-check input {position:absolute; left:0; top:0; width:100%; height:100%; opacity:0;}
+.input-check label {display:block; position:relative; padding-left:30px; line-height:31px; font-size:1.4rem;}
+.input-check input[type='radio'] + label:before,
+.input-check input[type='radio'] + label:after {content:''; position:absolute; top:50%; border-radius:100%}
+.input-check input[type='radio'] + label:before {left:0; width:20px; height:20px; border:1px solid #ddd; background-color:#fff; margin-top:-10px}
+.input-check input[type='radio']:checked + label:after {left:5px; width:10px; height:10px; margin-top:-5px; background-color:#f58220;}
+.input-check input[type='radio']:disabled + label:before {background-color:#f5f5f5;}
+.input-check input[type='radio']:checked:disabled + label:before {background-color:#fff;}
+.input-check input[type='radio']:checked:disabled + label:after {background-color:#ddd;}
+.input-check.checkbox label {font-size:1.6rem;}
+.input-check.checkbox input[type='checkbox'] + label:after {content:''; position:absolute; left:0; top:50%; margin-top:-10px; width:20px; height:20px; border:1px solid #ddd; background-color:#fff}
+.input-check.checkbox input[type='checkbox']:checked + label:after {border-color:#f58220; background:#f58220 url(/assets/pc/images/common/ico-checkbox.svg) 50% 50% no-repeat; background-size:12px 10px}
+.input-check.checkbox input[type='checkbox']:disabled + label:after {background-color:#f5f5f5;}
+.input-check.checkbox input[type='checkbox']:disabled:checked + label:after {background-color:#ddd; border-color:#ddd;}
+
+[class^='btn-'] {display:inline-block}
+.btn-act-line span {display:block; position:relative}
+.btn-act-line span:after {content:''; position:absolute; left:100%; top:50%; width:100%; max-width:45px; height:1px; margin-left:12px; background-color:#000; }
+.btn-act-line:focus span:after,
+.btn-act-line:hover span:after {-webkit-animation:line-spread 2s; animation:line-spread 2s}
+.btn-big {min-width:260px; padding:0 30px; background-color:#000; font-size:1.8rem; color:#fff} 
+.btn-big span {display:block; line-height:65px}
+.btn-big:disabled,
+.btn-big.disabled {cursor: default; background-color:rgba(0,0,0,.2)}
+.btn-big:hover,
+.btn-big:focus {background-color:#f58220;}
+.btn-apply {position:fixed; right:0; bottom:0; min-width:225px; padding:0 110px 0 30px; margin-left:17px; background:rgba(0,0,0,.85)}
+.btn-apply span {line-height:70px; font-size:2rem; font-weight:bold; color:rgba(255,255,255,.94); letter-spacing:3px;}
+.btn-apply span:after {background-color:#fff; max-width:62px}
+
+
+@-webkit-keyframes line-spread {
+    from {
+        width:0; 
+    }
+    to {
+        width:100%; 
+    }
+}
+
+@keyframes line-spread {
+    from {
+        width:0; 
+    }
+    to {
+        width:100%; 
+    }
+}
+
+.popup-basic {display:none; position:fixed; overflow-y:auto; z-index:1000; left:0; top:0; right:0; bottom:0; background:rgba(0,0,0,.5); text-align:center}
+.popup-basic.active {display:block}
+.popup-basic:after {content:''; display:inline-block; width:0; height:100%; vertical-align:middle}
+.popup-basic .popup-container {display:inline-block; position:relative; width:800px; padding:30px 30px 40px; vertical-align:middle; background:rgba(255,255,255,1); text-align:left}
+.popup-basic.min .popup-container {width:600px}
+.popup-basic .header-popup h3 {margin-bottom:30px; font-size:30px; font-weight:normal; line-height:normal}
+.popup-basic .header-popup .desc {margin-bottom:35px; font-size:1.4rem; font-weight:300; line-height:normal;}
+.popup-basic .btn-close {position:absolute; right:30px; top:38px; width:30px; height:30px; background:url(/assets/pc/images/common/btn-close-pop.svg); background-size:100% 100%;}
+
+.board-header {margin-bottom:15px; }
+.board-header:after {content:''; display:block; clear:both}
+.board-header .sort {float:right}
+.board-header .sort * {float:left}
+.board-header .sort li ~ li {position:relative; padding-left:21px; margin-left:20px}
+.board-header .sort li ~ li:after {content:''; position:absolute; left:0; top:50%; height:1.3rem; margin-top:-6.5px; border-left:1px solid #d8d8d8}
+.board-header .sort li a {font-size:1.6rem; color:#999; line-height:normal}
+.board-header .sort li.active a {color:#000}
+.board-header .action {float:right}
+.board-header .action * {float:left}
+.board-header .action li ~ li {margin-left:15px}
+.board-header .action li button {width:30px; height:30px; border:0; background-color:#fff;}
+.board-header .action li.share button {background:url(/assets/pc/images/common/ico-share.png) 50% 50% no-repeat;}
+.board-header .action li.print button {background:url(/assets/pc/images/common/ico-print.png) 50% 50% no-repeat;}
+
+.board-list {padding:60px 40px; border-top:1px solid #000; border-bottom:1px solid #ddd}
+.board-list ul:after {content:''; display:block; clear:both}
+.board-list ul li {float:left; width:calc((100% - 60px)/3)}
+.board-list ul li:nth-child(3n-1) {margin-left:30px}
+.board-list ul li:nth-child(3n) {float:right; }
+.board-list ul li:nth-child(3n) ~ li {margin-top:30px}
+.board-list ul li a {display:block; position:relative; height:310px; padding:55px 40px 45px}
+.board-list ul li a:before {content:''; position:absolute; left:0; top:0; width:100%; height:100%; border:1px solid #d8d8d8; -webkit-transition:all 500ms; transition:all 500ms}
+.board-list ul li a:hover:before,
+.board-list ul li a:focus:before {border-width:16px}
+.board-list ul li a .title,
+.board-list ul li a .text {display:block; display:-webkit-box; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical; word-wrap:break-word; max-height: 4.7em;}
+.board-list ul li a .title {font-size:2.2rem; line-height:1.5em; font-weight:normal; }
+.board-list ul li a .text {margin-top:20px; -webkit-line-clamp:3; font-size:1.4rem; line-height:1.57em; font-weight:300; color:#666;}
+.board-list ul li a .date {position:absolute; left:40px; bottom:45px; line-height:normal; font-size:1.6rem; font-weight:300; color:#48535b;}
+.board-list ul li a .badge {position:absolute; left:0; top:0; min-width:84px; text-align:center; padding:0 12px; line-height:36px; font-size:1.4rem; font-weight:bold; color:#fff}
+.board-list ul li a .badge.tan {background-color:#c5a07e;}
+.board-list ul li a .badge.blue {background-color:#043b72;}
+.board-list ul li.nodata {float:none; clear:both; width:100%; margin:0; padding:90px 0}
+.board-list ul li.nodata p {text-align:center; line-height:normal; font-size:2rem; padding-top:85px; background:url(/assets/pc/images/common/ico-no-result.png) 50% 0 no-repeat;}
+
+.board-view {padding:60px 0 90px; border-top:1px solid #000; border-bottom:1px solid #ddd;}
+.board-view:after {content:''; display:block; clear:both}
+.board-view .header-article {float:left; width:320px; padding-right:60px}
+.board-view .header-article .badge {display:inline-block; margin-bottom:20px; min-width:68px; text-align:center; padding:0 10px; line-height:29px; font-size:1.2rem; font-weight:bold; color:#fff}
+.board-view .header-article .badge.tan {background-color:#c5a07e;}
+.board-view .header-article .badge.blue {background-color:#043b72;}
+.board-view .header-article h3 {font-size:3rem; font-weight:normal; line-height:1.4em}
+.board-view .header-article .date {display:block; margin-top:30px; font-size:1.6rem; color:#666}
+.board-view .content-article {float:right; width:calc(100% - 320px)}
+.board-view .content-article .content,
+.board-view .content-article .content p {font-size:1.6rem; color:#666; line-height:normal;}
+.board-view .content-article .content .image-article {margin-bottom:50px}
+.board-view .content-article .content .image-article img {display:block; max-width:100%;}
+.board-view .content-article .attachement {margin-top:50px; max-width:830px}
+.board-view .content-article .attachement ul:after {content:''; display:block; clear:both}
+.board-view .content-article .attachement ul li {float:left; width:calc(50% - 5px)}
+.board-view .content-article .attachement ul li:nth-child(even) {float:right}
+.board-view .content-article .attachement ul li:nth-child(2n) ~ li {margin-top:10px}
+.board-view .content-article .attachement ul li a {display:block; padding:0 50px 0 16px; width:100%; height:40px; border:1px solid #eee; line-height:38px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; background:#fff url(/assets/pc/images/common/ico-download.png) calc(100% - 16px) 50% no-repeat;}
+
+.board-pagination {margin-top:60px; text-align:center}
+.board-pagination * {vertical-align:middle}
+.board-pagination .btn {position:relative; width:37px; height:37px; border:0; background:#fff;}
+.board-pagination .btn:disabled {opacity:.2; cursor:default;}
+.board-pagination .btn.first {margin-right:10px}
+.board-pagination .btn.last {margin-left:10px}
+.board-pagination .btn:after {content:''; position:absolute; left:0; top:0; width:100%; height:100%;}
+.board-pagination .btn.first:after {background:url(/assets/pc/images/common/btn-paging-first.png) 50% 50% no-repeat;}
+.board-pagination .btn.prev:after {background:url(/assets/pc/images/common/btn-paging-prev.png) 50% 50% no-repeat;}
+.board-pagination .btn.last:after {-webkit-transform:rotate(180deg); transform:rotate(180deg); background:url(/assets/pc/images/common/btn-paging-first.png) 50% 50% no-repeat;}
+.board-pagination .btn.next:after {-webkit-transform:rotate(180deg); transform:rotate(180deg); background:url(/assets/pc/images/common/btn-paging-prev.png) 50% 50% no-repeat;}
+.board-pagination .paging {margin:0 30px}
+.board-pagination .paging,
+.board-pagination .paging > * {display:inline-block}
+.board-pagination .paging > * {width:30px; height:30px; text-align:center; font-size:1.6rem; color:#999;}
+.board-pagination .paging > * span {display:inline-block; position:relative; line-height:30px}
+.board-pagination .paging strong {font-weight:normal; color:#000;}
+.board-pagination .paging strong span:after {content:''; position:absolute; left:0; bottom:2px; width:100%; border-bottom:1px solid #000}
+
+.board-action {text-align:center; margin-top:50px}
+
+@media print {
+    .board-header {display:none}
+}
+
+
+

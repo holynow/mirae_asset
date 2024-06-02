@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>페이지명 | 미래에셋 홍천연수원</title>
+    <link rel="stylesheet" href="/assets/pc/css/reset.css">
+    <link rel="stylesheet" href="/assets/pc/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/assets/pc/css/swiper.min.css">
+    <link rel="stylesheet" href="/assets/pc/css/layout.css">
+    <link rel="stylesheet" href="/assets/pc/css/common.css">
+    <link rel="stylesheet" href="/assets/pc/css/style.css">
+    <script type="text/javascript" src="/assets/pc/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/pc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/assets/pc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="/assets/pc/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="/assets/pc/js/ui.common.js"></script>
+</head>
+<body>
+
+<style>
+    body {padding:30px}
+</style>
+<a href="#" onclick="popup.open($('#popupName1'),$(this)); return false;">팝업 기본 샘플 열기</a>
+<br><br>
+<a href="#" onclick="popup.open($('#popupName2'),$(this)); return false;">팝업 작은사이즈 샘플 열기</a>
+
+<!-- 팝업 기본 -->
+<div id="popupName1" class="popup-basic">
+    <section class="popup-container">
+        <header class="header-popup">
+            <h3>층별 안내</h3>
+            <p class="desc">연수시설, 객실 및 편의시설 등 층별 주요시설과 건물 내에서 이동하는 방법을 안내해 드립니다.</p><!-- 있다가 없다가 -->
+        </header>
+        <div class="content-popup">
+            <!-- popup content -->
+            
+            <!-- //popup content -->
+        </div>
+        <a class="btn-close" href="#" onclick="popup.close($('#popupName1'))"><span class="a11y">닫기</span></a>
+    </section>
+</div>
+<!-- //팝업 기본 -->
+
+<!-- 팝업 작은사이즈 -->
+<div id="popupName2" class="popup-basic min">
+    <section class="popup-container">
+        <header class="header-popup">
+            <h3>층별 안내</h3>
+        </header>
+        <div class="content-popup">
+            <!-- popup content -->
+            
+            <!-- //popup content -->
+        </div>
+        <a class="btn-close" href="#" onclick="popup.close($('#popupName2'))"><span class="a11y">닫기</span></a>
+    </section>
+</div>
+<!-- //팝업 작은사이즈 -->
+
+
+
+
+    
+</body>
+</html>

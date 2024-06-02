@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>페이지명 | 미래에셋 홍천연수원</title>
+    <link rel="stylesheet" href="/assets/pc/css/reset.css">
+    <link rel="stylesheet" href="/assets/pc/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/assets/pc/css/swiper.min.css">
+    <link rel="stylesheet" href="/assets/pc/css/layout.css">
+    <link rel="stylesheet" href="/assets/pc/css/common.css">
+    <link rel="stylesheet" href="/assets/pc/css/style.css">
+    <script type="text/javascript" src="/assets/pc/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/pc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/assets/pc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="/assets/pc/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="/assets/pc/js/ui.common.js"></script>
+</head>
+<body>
+    <ul class="skip-navigation">
+        <li><a href="#content">본문내용 바로가기</a></li>
+    </ul>
+    <div id="wrapper">
+        <header id="header">
+            <div class="inner-header">
+                <h1 class="logo"><a href="#"><span class="a11y">미래에셋 홍천 연수원</span></a></h1>
+                <nav id="gnb">
+                     <ul>
+                         <li><a href="#">미래를 보는 눈</a>
+                             <ul>
+                                 <li><a href="#">미래를 보는 눈 소개</a></li>
+                                 <li><a href="#">Contact US</a></li>
+                             </ul>
+                         </li>
+                         <li><a href="#">시설안내</a>
+                             <ul>
+                                 <li><a href="#">연수시설</a></li>
+                                 <li><a href="#">숙박시설</a></li>
+                                 <li><a href="#">편의시설</a></li>
+                             </ul>
+                         </li>
+                         <li><a href="#">이용안내</a></li>
+                         <li><a href="#">공지사항</a></li>
+                     </ul>
+                 </nav>
+            </div>             
+        </header>
+        <div id="content">
+            <!-- content -->
+            <section class="section-contus">
+                <header class="header-section">
+                    <h2>미래를 보는 눈</h2>
+                </header>
+                <div class="top-wrap">
+                    <div class="place-links">
+                        <ul>
+                            <li><a href="#">미래를 보는 눈</a></li>
+                            <li class="active"><a href="#">Contact Us</a></li>                            
+                        </ul>
+                    </div>
+                    <div class="cont-util">
+                        <ul>
+                            <li><button type="button" class="btn-share"><span class="hidden">공유하기</span></button></li>
+                            <li><button type="button" class="btn-print" onclick="window.print();" title="프린트"><span class="hidden">프린트하기</span></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-section">
+                    <article class="board-view">
+                        <header class="header-article">
+                            <h3>연수원 오시는 길</h3>
+                        </header>
+                        <div class="content-article">
+                            <div class="content">
+                                <!-- 지도 -->
+                                <div id="mapDivision" class="map-area">
+                                    
+                                </div>
+                                <!-- //지도 -->
+                                <div class="list-cont">
+                                    <ul>
+                                        <li>
+                                            <strong>Reservation & Inquiry</strong>
+                                            <ul class="list-info">
+                                                <li>EMAIL : enye704@sagewood.co.kr</li>
+                                                <li>TEL : 033-439-1600</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>Address</strong>
+                                            <ul class="list-info">
+                                                <li>강원도 홍천군 두촌면 광석로 898-160</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="board-view video">
+                        <header class="header-article">
+                            <h3>연수동 가는 길 영상</h3>
+                        </header>
+                        <div class="content-article">
+                            <div class="content">
+                                <!-- 영상 -->
+                                <div class="image-article">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lh1UwDhRW8o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <!-- //영상 -->
+                            </div>
+                        </div>
+                    </article>
+                    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=0p6rc2spdl&submodules=geocoder"></script>
+                    <script>
+                        naver.maps.Service.geocode({
+                            query: '강원도 홍천군 두촌면 광석로 898-160'
+                        }, function(status, response) {
+                            if (status !== naver.maps.Service.Status.OK) {
+                                return alert('Something wrong!');
+                            }
+                            var result = response.v2,
+                                items = result.addresses; 
+                            //console.log(items[0]);
+                        });
+                        var map = new naver.maps.Map('mapDivision', {
+                            center: new naver.maps.LatLng(37.8859653, 128.1186712),
+                            scaleControl: false,
+                            logoControl: false,
+                            mapDataControl: false,
+                            zoomControl: true,
+                            minZoom: 6,
+                            zoom: 17,
+                        });
+                    </script>
+                   
+                   
+                </div>
+            </section>
+            <!-- //content -->
+        </div>
+        <footer id="footer">
+            <div class="group-footer footer1"><div class="inner-footer">
+                <div class="wrap-footer">
+                    <em class="logo"><span class="a11y">MIRAE ASSET</span></em>
+                    <div class="info">
+                        <strong class="title">미래에셋 홍천 연수원</strong>
+                        <p>강원도 홍천군 두촌면 광석로 898-87 ㅣ 대표전화 033) 439-1600 </p>
+                        
+                        <ul class="menu">
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">이메일집단수집거부</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">영상정보처리운영방침</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn-act-line btn-footer" href="#"><span>세이지우드 홍천</span></a>
+                    <a class="btn-top" href="#"><span class="a11y">TOP으로</span></a>
+                </div>
+            </div></div>
+            <div class="group-footer footer2"><div class="inner-footer">
+                <div class="wrap-footer">
+                    <p class="copyright"><span class="c">&copy;</span>Copyright 2020 ©Mirae Asset Daewoo Co.& Mirae Asset Life Insurance Co.,LTD. ALL RIGHTS RESERVED</p>
+                </div>
+            </div></div>
+        </footer>
+    </div>
+    
+</body>
+</html>
